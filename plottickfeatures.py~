@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+
+import matplotlib.pyplot as plt
+
+x = []
+y = []
+for i in range (1, 63):
+  x.append(i)
+for i in range (1, 63):
+  y.append(0.5)
+
+labels = ["zcr", "ctd", "rlf", "flx", "mfcc0", "mfcc1", "mfcc2", "mfcc3", "mfcc4", "mfcc5", "mfcc6", "mfcc7", "mfcc8", "mfcc9", "mfcc10", "mfcc11", "mfcc12", "chroma0", "chroma1", "chroma2", "chroma3", "chroma4", "chroma5", "chroma6", "chroma7", "chroma8", "chroma9", "chroma10", "chroma11", "av_chroma", "min_chroma"]
+
+
+
+plt.plot(x, y, 'bo')
+# You can specify a rotation for the tick labels in degrees or with keywords.
+plt.xticks(x, labels, rotation=60)
+# Pad margins so that markers don't get clipped by the axes
+plt.margins(0.02)
+# Tweak spacing to prevent clipping of tick-labels
+plt.subplots_adjust(bottom=0.25)
+plt.show()
